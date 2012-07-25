@@ -5,10 +5,12 @@ namespace ComprasColetivas.Domain.Model
 {
     public class Comprador : Pessoa
     {
-        public List<Cupom> cupons;
-
-        public DateTime CalcularDataAniversario() { throw new NotImplementedException(); }
-
-        public bool RecebeEmailOferta() { throw new NotImplementedException(); }
+        public virtual DateTime Nascimento { get; set; }
+        public virtual string CPF { get; set; }
+        public virtual string RG { get; set; }
+        public virtual string OrgaoEmissor { get; set; }
+        public virtual string FiliacaoPai { get; set; }
+        public virtual string FiliacaoMae { get; set; }
+        public virtual bool RecebeEmailOferta { get; set; }
     }
 }

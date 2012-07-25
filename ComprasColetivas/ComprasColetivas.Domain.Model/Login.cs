@@ -15,11 +15,8 @@ namespace ComprasColetivas.Domain.Model
 
     public class Login
     {
-        public Pessoa pessoa;
-
-        public Login(Pessoa pessoa)
-        {
-            this.pessoa = pessoa;
-        }
+        public virtual string Usuario { get; set; }
+        public virtual string Senha { get; set; }
+        public virtual bool Bloqueado { get; set; }
     }
 }

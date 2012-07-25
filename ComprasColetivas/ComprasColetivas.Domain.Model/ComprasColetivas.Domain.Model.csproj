@@ -41,13 +41,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anunciante.cs" />
+    <Compile Include="BandeiraCartao.cs" />
+    <Compile Include="CartaoCreditoInfo.cs" />
+    <Compile Include="Cidade.cs" />
+    <Compile Include="ClasseBase.cs" />
     <Compile Include="Comprador.cs" />
     <Compile Include="Contato.cs" />
+    <Compile Include="Pagamento.cs" />
     <Compile Include="Cupom.cs" />
     <Compile Include="Endereco.cs" />
-    <Compile Include="EspecificacaoOferta.cs" />
+    <Compile Include="Estado.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Oferta.cs" />
+    <Compile Include="PaypalInfo.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoOferta.cs" />

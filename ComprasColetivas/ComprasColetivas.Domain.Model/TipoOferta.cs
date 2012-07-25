@@ -2,7 +2,7 @@ namespace ComprasColetivas.Domain.Model
 {
     public enum TipoOferta
     {
-        SERVICO,
-        PRODUTO
+        SERVICO = 1,
+        PRODUTO = 0
     }
 }
