@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ComprasColetivas.Domain.Model;
 
 namespace ComprasColetivas.Domain.Repository.Repositories
 {
-    public interface IRepository<T>
+    public interface IRepository<T> where T : ClasseBase
     {
         void IniciarTransacao();
         void FinalizarTransacao();
@@ -13,6 +14,8 @@ namespace ComprasColetivas.Domain.Repository.Repositories
         void Salvar(T entity);
         void Excluir(T entity);
         T ObterPorId(int id);
+        X ObterUm<X>(Func<X, bool> criterio);
         List<T> ObterTodos();
+        List<X> ObterTodos<X>(Func<X, bool> criterio);
     }
 }

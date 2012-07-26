@@ -52,7 +52,7 @@ namespace ComprasColetivas.Infrastructure.NHibernateHelper
 
             factory = Fluently.Configure()
 
-                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(Properties.Settings.Default.ConnectionStringSQLServer))                
+                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(Properties.Settings.Default.ConnectionStringSQLServer).ShowSql())                
                 .Mappings(m =>
                 {
                     m.AutoMappings.Add(AutoMap.Assemblies(cfg, assemblies).Conventions.Setup(c =>
@@ -328,7 +328,7 @@ namespace ComprasColetivas.Infrastructure.NHibernateHelper
 
             new SchemaUpdate(config).Execute(true, true);
 
-            new SchemaExport(config).Create(false, true);
+            new SchemaExport(config).Create(true, true);
 
             new SchemaValidator(config).Validate();
 

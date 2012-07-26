@@ -5,11 +5,13 @@ using System.Text;
 using ComprasColetivas.Infrastructure.IDAO;
 using ComprasColetivas.Infrastructure.NHibernateHelper;
 using NHibernate;
+using NHibernate.Linq;
+using ComprasColetivas.Domain.Model;
 
 
 namespace ComprasColetivas.Infrastructure.NHDAO
 {
-    public abstract class BaseDAO<T> : IBaseDAO<T>
+    public abstract class BaseDAO<T> : IBaseDAO<T> where T: ClasseBase
     {
 
         protected DatabaseControl SessionManager;
@@ -38,10 +40,22 @@ namespace ComprasColetivas.Infrastructure.NHDAO
             return persister.Load<T>(id);
         }
 
+        public X ObterUm<X>(Func<X, bool> criterio) 
+        {
+            return persister.Query<X>().FirstOrDefault(criterio);
+        }
+
         public List<T> ObterTodos()
         {
             var lista = persister.CreateCriteria(typeof(T)).List<T>();
             return lista.ToList();
+        }
+
+        public List<X> ObterTodos<X>(Func<X, bool> criterio)
+        {
+
+            return persister.Query<X>().Where(criterio).ToList();
+
         }
 
         public void IniciarTransacao()
@@ -58,5 +72,6 @@ namespace ComprasColetivas.Infrastructure.NHDAO
         {
             SessionManager.Rollback();
         }
+
     }
 }

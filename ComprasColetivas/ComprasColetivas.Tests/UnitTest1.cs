@@ -7,7 +7,7 @@ using ComprasColetivas.Domain.Model;
 using ComprasColetivas.Domain.Repository.Repositories;
 using ComprasColetivas.Domain.Service.Services;
 using ComprasColetivas.Domain.Service.Factories;
-
+using ComprasColetivas.Domain.Service.Helper;
 
 namespace ComprasColetivas.Tests
 {
@@ -31,6 +31,10 @@ namespace ComprasColetivas.Tests
 
             IServicoAnunciante servicoAnunciante = FactoryService.getInstance.criarServicoAnunciante();
             servicoAnunciante.CadastrarAnunciante(anunciante);
+
+            Anunciante anuncianteGravado = ConsultaService.ObterUm<Anunciante>(a => a.Login.Usuario == "hmattoso");
+
+            Assert.AreEqual(anunciante.Id, anuncianteGravado.Id);
 
         }
     }

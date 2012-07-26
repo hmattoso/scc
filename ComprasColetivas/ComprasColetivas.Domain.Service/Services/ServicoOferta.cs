@@ -7,6 +7,7 @@ namespace ComprasColetivas.Domain.Service
         }
         public void PublicarOferta()
         {
+            
         }
         public void CalcularRepassePorOferta()
         {

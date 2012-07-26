@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="AbstractFactory\AbstractFactoryService.cs" />
     <Compile Include="Factories\FactoryService.cs" />
+    <Compile Include="Helper\ConsultaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Interfaces\IServicoOferta.cs" />
     <Compile Include="Services\Interfaces\IServicoAnunciante.cs" />
     <Compile Include="Services\ServicoAnunciante.cs" />
     <Compile Include="Services\ServicoMeioPagamento.cs" />

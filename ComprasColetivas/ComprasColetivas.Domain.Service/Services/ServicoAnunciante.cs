@@ -12,18 +12,22 @@ namespace ComprasColetivas.Domain.Service.Services
     {
 
         public void CadastrarAnunciante(Anunciante anunciante)
-        {
+        {            
+
             IRepositorioAnunciante repo = FactoryRepository.getInstance.criarRepositorioAnunciante();
+            
             repo.IniciarTransacao();
             try
             {
                 repo.Salvar(anunciante);
+                repo.FinalizarTransacao();
             }
             catch (Exception)
             {
-                repo.FinalizarTransacao();
+                repo.CancelarTransacao();
                 throw;
             }
+
         }
 
         public IList<Oferta> ListarOfertasPorAnunciante(Anunciante anunciante)

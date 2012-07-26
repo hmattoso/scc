@@ -18,7 +18,7 @@ namespace ComprasColetivas.Infrastructure.NHibernateHelper
 
         public void Apply(FluentNHibernate.Conventions.Instances.IClassInstance instance)
         {
-            instance.Table(instance.EntityType.Name);
+            instance.Table(instance.EntityType.Name);            
         }
 
     }

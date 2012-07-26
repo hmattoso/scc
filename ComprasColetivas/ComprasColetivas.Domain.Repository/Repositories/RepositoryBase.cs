@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ComprasColetivas.Infrastructure.IDAO;
+using ComprasColetivas.Domain.Model;
 
 namespace ComprasColetivas.Domain.Repository.Repositories
 {
-    public class RepositoryBase<T>: IRepository<T>
+    public class RepositoryBase<T>: IRepository<T> where T:ClasseBase
     {
 
         protected IBaseDAO<T> dao;
@@ -50,5 +51,16 @@ namespace ComprasColetivas.Domain.Repository.Repositories
         {
             dao.CancelarTransacao();
         }
+
+        public X ObterUm<X>(Func<X, bool> criterio)
+        {
+            return dao.ObterUm<X>(criterio);
+        }
+
+        public List<X> ObterTodos<X>(Func<X, bool> criterio)
+        {
+            return dao.ObterTodos<X>(criterio);
+        }
+
     }
 }
