@@ -9,5 +9,7 @@ namespace ComprasColetivas.Domain.Repository.AbstractFactory
     public abstract class AbstractFactoryRepository
     {
         public abstract IRepositorioAnunciante criarRepositorioAnunciante();
+
+        public abstract IRepositorioOferta criarRepositorioOferta();
     }
 }

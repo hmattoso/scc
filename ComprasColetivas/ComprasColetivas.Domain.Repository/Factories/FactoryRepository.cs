@@ -31,6 +31,10 @@ namespace ComprasColetivas.Domain.Repository.Factories
             return new RepositorioAnunciante();
         }
 
+        public override IRepositorioOferta criarRepositorioOferta()
+        {
+            return new RepositorioOferta();
+        }
     }
 
 }

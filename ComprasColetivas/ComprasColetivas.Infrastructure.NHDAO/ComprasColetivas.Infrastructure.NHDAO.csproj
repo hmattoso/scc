@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="AnuncianteDAO.cs" />
     <Compile Include="BaseDAO.cs" />
+    <Compile Include="OfertaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

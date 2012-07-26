@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Domain.Model;
 
-namespace ComprasColetivas.Domain.Service.Services
+namespace ComprasColetivas.Infrastructure.IDAO
 {
-    public interface IServicoAnunciante
+    public interface IOfertaDAO: IBaseDAO<Oferta>
     {
-        void CadastrarAnunciante(Anunciante anunciante);
         IList<Oferta> ListarOfertasPorAnunciante(Anunciante anunciante);
     }
 }

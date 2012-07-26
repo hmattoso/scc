@@ -28,5 +28,17 @@ namespace ComprasColetivas.Infrastructure.DAO.Factories
 
         }
 
+
+        public override IOfertaDAO CriarOfertaDAO()
+        {
+
+            //aqui verificaremos qual o tipo de banco estamos processando pelo padrão provider
+            //se sor relacional, a persistencia será do NH, caso contrario deverá retornar um DAO
+            //especifico, ex: OfertaDAOMongo() que implementa a mesma interface IOfertaDAO.
+
+            return new OfertaDAO();
+
+        }
+
     }
 }

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Domain.Model;
 
-namespace ComprasColetivas.Domain.Service.Services
+namespace ComprasColetivas.Domain.Repository.Repositories
 {
-    public interface IServicoAnunciante
+    public interface IRepositorioOferta: IRepository<Oferta>
     {
-        void CadastrarAnunciante(Anunciante anunciante);
         IList<Oferta> ListarOfertasPorAnunciante(Anunciante anunciante);
     }
 }

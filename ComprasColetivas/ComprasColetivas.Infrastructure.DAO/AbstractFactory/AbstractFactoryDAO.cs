@@ -8,6 +8,7 @@ namespace ComprasColetivas.Infrastructure.DAO
 {
     public abstract class AbstractFactoryDAO
     {
-        public abstract IAnuncianteDAO CriarAnuncianteDAO(); 
+        public abstract IAnuncianteDAO CriarAnuncianteDAO();
+        public abstract IOfertaDAO CriarOfertaDAO();
     }
 }

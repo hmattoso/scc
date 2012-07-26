@@ -26,5 +26,11 @@ namespace ComprasColetivas.Domain.Service.Services
             }
         }
 
+        public IList<Oferta> ListarOfertasPorAnunciante(Anunciante anunciante)
+        {
+            IRepositorioOferta repo = FactoryRepository.getInstance.criarRepositorioOferta();
+            return repo.ListarOfertasPorAnunciante(anunciante);
+        }
+
     }
 }
