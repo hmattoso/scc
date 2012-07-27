@@ -13,7 +13,7 @@ namespace ComprasColetivas.Infrastructure.NHDAO
 
         public IList<Oferta> ListarOfertasPorAnunciante(Anunciante anunciante)
         {
-            IQuery qryHQL = persister.CreateQuery("from Oferta o where Anunciante = :Anunciante");
+            IQuery qryHQL = persister.CreateQuery("from Oferta o where Anunciante = :Anunciante");            
             qryHQL.SetParameter("Anunciante", anunciante);
             return qryHQL.List<Oferta>();
         }
