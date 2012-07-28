@@ -27,7 +27,7 @@ namespace ComprasColetivas.Domain.Repository.Repositories
             dao.Excluir(entity);
         }
 
-        public T ObterPorId(int id)
+        public T ObterPorId(Guid id)
         {
             return dao.ObterPorId(id);
         }

@@ -35,7 +35,7 @@ namespace ComprasColetivas.Infrastructure.NHDAO
             persister.Delete(entity);
         }
 
-        public T ObterPorId(int id)
+        public T ObterPorId(Guid id)
         {
             return persister.Load<T>(id);
         }

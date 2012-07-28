@@ -4,7 +4,6 @@ namespace ComprasColetivas.Infrastructure.MongoDbHelper
 {
     public interface IDataBaseControl
     {
-        MongoDatabase DataBase { get; }
-        void Open();
+        MongoDatabase Context { get; }
     }
 }

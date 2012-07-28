@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>9b592d66-cdd5-4e76-9989-4be42244a165</ProjectGuid>
+    <ProjectGuid>{6F75CA85-293A-40DE-B142-F15075125A2C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ComprasColetivas.Infrastructure.MongoDbDAO</RootNamespace>
@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\ThirdPartyTools\MongoDBCSharpDriver\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\ThirdPartyTools\MongoDBCSharpDriver\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,8 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AnuncianteDAO.cs" />
+    <Compile Include="BaseDAO.cs" />
+    <Compile Include="CompradorDAO.cs" />
+    <Compile Include="OfertaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComprasColetivas.Domain.Model\ComprasColetivas.Domain.Model.csproj">
+      <Project>{23518E33-60BA-41EF-86E0-68881ACA5A74}</Project>
+      <Name>ComprasColetivas.Domain.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComprasColetivas.Infrastructure.IDAO\ComprasColetivas.Infrastructure.IDAO.csproj">
+      <Project>{F67DB5E9-A630-4793-AFEB-630218CBFFA6}</Project>
+      <Name>ComprasColetivas.Infrastructure.IDAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComprasColetivas.Infrastructure.MongoDbHelper\ComprasColetivas.Infrastructure.MongoDbHelper.csproj">
+      <Project>{650FAD25-7505-44FD-B3E5-B52053A826D4}</Project>
+      <Name>ComprasColetivas.Infrastructure.MongoDbHelper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

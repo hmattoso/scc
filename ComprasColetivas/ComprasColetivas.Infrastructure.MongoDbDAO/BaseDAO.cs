@@ -7,6 +7,7 @@ using ComprasColetivas.Domain.Model;
 using MongoDB.Driver;
 using ComprasColetivas.Infrastructure.MongoDbHelper;
 using MongoDB.Driver.Builders;
+using MongoDB.Driver.Linq;
 
 namespace ComprasColetivas.Infrastructure.MongoDbDAO
 {
@@ -20,8 +21,7 @@ namespace ComprasColetivas.Infrastructure.MongoDbDAO
         public BaseDAO()
         {
             SessionManager = new DataBaseControl();
-            SessionManager.Open();
-            persister = SessionManager.DataBase;
+            persister = SessionManager.Context;
         }
 
         public void IniciarTransacao()
@@ -41,35 +41,33 @@ namespace ComprasColetivas.Infrastructure.MongoDbDAO
 
         public void Salvar(T entity)
         {
-            persister.GetCollection<T>(entity.GetType().FullName).Save(entity);
+            persister.GetCollection<T>(typeof(T).Name).Save(entity);
         }
 
         public void Excluir(T entity)
         {
             var query = Query.EQ("_id", entity.Id);
-            persister.GetCollection<T>(entity.GetType().FullName).Remove(query);
+            persister.GetCollection<T>(typeof(T).Name).Remove(query);
         }
 
-        public T ObterPorId(int id)
+        public T ObterPorId(Guid id)
         {
-            var query = Query.EQ("_id", id);
-            var entity = persister.GetCollection<T>("").FindOne(query);
-            return (T)entity;
+            return persister.GetCollection<T>(typeof(T).Name).AsQueryable<T>().Where(x => x.Id == id).FirstOrDefault();            
         }
 
         public X ObterUm<X>(Func<X, bool> criterio)
         {
-            throw new NotImplementedException();
+            return persister.GetCollection<X>(typeof(T).Name).AsQueryable<X>().Where(criterio).FirstOrDefault();
         }
 
         public List<T> ObterTodos()
         {
-            return persister.GetCollection<T>("").FindAll().ToList<T>();
+            return persister.GetCollection<T>(typeof(T).Name).AsQueryable<T>().ToList();
         }
 
         public List<X> ObterTodos<X>(Func<X, bool> criterio)
         {
-            throw new NotImplementedException();
+            return persister.GetCollection<T>(typeof(T).Name).AsQueryable<X>().Where(criterio).ToList();
         }
     }
 }

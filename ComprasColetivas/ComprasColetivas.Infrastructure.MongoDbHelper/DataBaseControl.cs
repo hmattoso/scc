@@ -10,14 +10,23 @@ namespace ComprasColetivas.Infrastructure.MongoDbHelper
 {
     public class DataBaseControl : IDisposable, IDataBaseControl
     {
-        private MongoServer server = MongoServer.Create(ConfigurationSettings.AppSettings["MongoDBConnection"].ToString());
-        //public MongoServer Server { get { return this.server; } private set { server = value; } }
-        public MongoDatabase DataBase { get { return this.server.GetDatabase(ConfigurationSettings.AppSettings["MongoDataBase"].ToString()); } }
-
-        public void Open()
+        private MongoServer server
         {
-            server.Connect();
+            get
+            {
+                return MongoServer.Create();
+            }
         }
+
+        private MongoDatabase context
+        {
+            get
+            {
+                return this.server.GetDatabase(ConfigurationSettings.AppSettings["MongoDataBase"].ToString());
+            }
+        }
+
+        public MongoDatabase Context { get { return this.context; } }
 
         static DataBaseControl()
         {
@@ -26,5 +35,9 @@ namespace ComprasColetivas.Infrastructure.MongoDbHelper
             BsonClassMap.RegisterClassMap<Comprador>();
         }
 
+        public void Dispose()
+        {
+            this.Dispose();
+        }
     }
 }
