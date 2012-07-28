@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Domain.Model;
 
-namespace ComprasColetivas.Domain.Repository.Repositories.Interfaces
+namespace ComprasColetivas.Infrastructure.IDAO
 {
-    public interface IRepositorioAnunciante: IRepository<Anunciante>
+    public interface ICompradorDAO : IBaseDAO<Comprador>
     {
     }
 }

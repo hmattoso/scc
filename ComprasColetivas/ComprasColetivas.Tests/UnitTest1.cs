@@ -8,6 +8,7 @@ using ComprasColetivas.Domain.Repository.Repositories;
 using ComprasColetivas.Domain.Service.Services;
 using ComprasColetivas.Domain.Service.Factories;
 using ComprasColetivas.Domain.Service.Helper;
+using ComprasColetivas.Domain.Service.Services.Interfaces;
 
 namespace ComprasColetivas.Tests
 {

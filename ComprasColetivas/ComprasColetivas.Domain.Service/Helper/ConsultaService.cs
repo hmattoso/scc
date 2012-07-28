@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Domain.Repository.Repositories;
 using ComprasColetivas.Domain.Repository.Factories;
+using ComprasColetivas.Domain.Repository.Repositories.Interfaces;
 
 namespace ComprasColetivas.Domain.Service.Helper
 {

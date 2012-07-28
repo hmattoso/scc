@@ -40,5 +40,12 @@ namespace ComprasColetivas.Infrastructure.DAO.Factories
 
         }
 
+
+        public override ICompradorDAO CriarCompradorDAO()
+        {
+
+            return new CompradorDAO();
+        }
+
     }
 }

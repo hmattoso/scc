@@ -10,5 +10,6 @@ namespace ComprasColetivas.Infrastructure.DAO
     {
         public abstract IAnuncianteDAO CriarAnuncianteDAO();
         public abstract IOfertaDAO CriarOfertaDAO();
+        public abstract ICompradorDAO CriarCompradorDAO();
     }
 }

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICompradorDAO.cs" />
     <Compile Include="IOfertaDAO.cs" />
     <Compile Include="IAnuncianteDAO.cs" />
     <Compile Include="IBaseDAO.cs" />

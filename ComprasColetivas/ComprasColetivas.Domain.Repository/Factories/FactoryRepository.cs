@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Domain.Repository.AbstractFactory;
 using ComprasColetivas.Domain.Repository.Repositories;
+using ComprasColetivas.Domain.Repository.Repositories.Interfaces;
 
 namespace ComprasColetivas.Domain.Repository.Factories
 {
@@ -34,6 +35,11 @@ namespace ComprasColetivas.Domain.Repository.Factories
         public override IRepositorioOferta criarRepositorioOferta()
         {
             return new RepositorioOferta();
+        }
+
+        public override IRepositorioComprador criarRepositorioComprador()
+        {
+            return new RepositorioComprador();
         }
     }
 

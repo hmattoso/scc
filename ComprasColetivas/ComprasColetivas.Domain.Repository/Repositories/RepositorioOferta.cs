@@ -3,6 +3,7 @@ using ComprasColetivas.Domain.Model;
 using ComprasColetivas.Infrastructure.DAO.Factories;
 using System.Collections.Generic;
 using ComprasColetivas.Infrastructure.IDAO;
+using ComprasColetivas.Domain.Repository.Repositories.Interfaces;
 
 
 namespace ComprasColetivas.Domain.Repository.Repositories

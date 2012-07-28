@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Domain.Service.AbstractFactory;
 using ComprasColetivas.Domain.Service.Services;
+using ComprasColetivas.Domain.Service.Services.Interfaces;
 
 namespace ComprasColetivas.Domain.Service.Factories
 {

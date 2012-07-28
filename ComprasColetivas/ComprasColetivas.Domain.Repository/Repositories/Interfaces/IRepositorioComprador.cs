@@ -6,8 +6,7 @@ using ComprasColetivas.Domain.Model;
 
 namespace ComprasColetivas.Domain.Repository.Repositories.Interfaces
 {
-    public interface IRepositorioOferta: IRepository<Oferta>
+    public interface IRepositorioComprador : IRepository<Comprador>
     {
-        IList<Oferta> ListarOfertasPorAnunciante(Anunciante anunciante);
     }
 }

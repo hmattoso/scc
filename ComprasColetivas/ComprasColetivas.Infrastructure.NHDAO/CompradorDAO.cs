@@ -5,10 +5,9 @@ using System.Text;
 using ComprasColetivas.Domain.Model;
 using ComprasColetivas.Infrastructure.IDAO;
 
-namespace ComprasColetivas.Infrastructure.MongoDbDAO
+namespace ComprasColetivas.Infrastructure.NHDAO
 {
-    class AnuncianteDAO : BaseDAO<Anunciante>,IAnuncianteDAO
+    public class CompradorDAO : BaseDAO<Comprador>, ICompradorDAO
     {
-
     }
 }

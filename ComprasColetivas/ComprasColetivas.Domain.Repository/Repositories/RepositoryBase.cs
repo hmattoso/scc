@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Infrastructure.IDAO;
 using ComprasColetivas.Domain.Model;
+using ComprasColetivas.Domain.Repository.Repositories.Interfaces;
 
 namespace ComprasColetivas.Domain.Repository.Repositories
 {
-    public class RepositoryBase<T>: IRepository<T> where T:ClasseBase
+    public class RepositoryBase<T> : IRepository<T> where T : ClasseBase
     {
 
         protected IBaseDAO<T> dao;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using ComprasColetivas.Domain.Model;
 
-namespace ComprasColetivas.Domain.Repository.Repositories
+namespace ComprasColetivas.Domain.Repository.Repositories.Interfaces
 {
     public interface IRepository<T> where T : ClasseBase
     {

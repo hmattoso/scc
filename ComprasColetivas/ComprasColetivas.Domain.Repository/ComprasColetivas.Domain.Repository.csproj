@@ -43,6 +43,8 @@
     <Compile Include="AbstractFactory\AbstractFactoryRepository.cs" />
     <Compile Include="Factories\FactoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Interfaces\IRepositorioComprador.cs" />
+    <Compile Include="Repositories\RepositorioComprador.cs" />
     <Compile Include="Repositories\RepositorioOferta.cs" />
     <Compile Include="Repositories\Interfaces\IRepositorioOferta.cs" />
     <Compile Include="Repositories\Interfaces\IRepositorioAnunciante.cs" />

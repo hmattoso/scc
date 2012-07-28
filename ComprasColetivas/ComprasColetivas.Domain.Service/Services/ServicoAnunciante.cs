@@ -5,6 +5,8 @@ using System.Text;
 using ComprasColetivas.Domain.Repository.Factories;
 using ComprasColetivas.Domain.Repository.Repositories;
 using ComprasColetivas.Domain.Model;
+using ComprasColetivas.Domain.Service.Services.Interfaces;
+using ComprasColetivas.Domain.Repository.Repositories.Interfaces;
 
 namespace ComprasColetivas.Domain.Service.Services
 {
