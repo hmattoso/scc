@@ -14,6 +14,10 @@ namespace ComprasColetivas.Application.APIContract.OperationContract
         [OperationContract]
         void CadastrarAnunciante(AnuncianteContract anunciante);
         [OperationContract]
-        string ObterOfertasPorAnunciante(string cpf);
+        List<OfertaContract> ObterOfertasPorAnunciante(string cnpj);
+        [OperationContract]
+        int TotalizarCuponsPorAnunciante(string cnpj);
+        [OperationContract]
+        void BaixarCupom(string CodigoCupom);
     }
 }

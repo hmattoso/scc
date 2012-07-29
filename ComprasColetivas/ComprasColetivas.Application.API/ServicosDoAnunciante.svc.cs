@@ -24,11 +24,23 @@ namespace ComprasColetivas.Application.API
             servicoAnunciante.CadastrarAnunciante(anunciante);
         }
 
-        public string ObterOfertasPorAnunciante(string cpf)
+        public List<OfertaContract> ObterOfertasPorAnunciante(string cnpj)
         {
             IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
-            servicoOferta.ListarOfertasPorAnunciante(cpf);
+            servicoOferta.ListarOfertasPorAnunciante(cnpj);
             throw new NotImplementedException();
+        }
+
+        public int TotalizarCuponsPorAnunciante(string cnpj)
+        {
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            return servicoOferta.TotalizarCuponsPorAnunciante(cnpj);
+        }
+
+        public void BaixarCupom(string CodigoCupom)
+        {
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            servicoOferta.BaixarCupom(CodigoCupom);
         }
     }
 }

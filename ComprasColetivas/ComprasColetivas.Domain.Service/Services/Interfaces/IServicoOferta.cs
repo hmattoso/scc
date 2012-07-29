@@ -28,8 +28,8 @@ namespace ComprasColetivas.Domain.Service.Services.Interfaces
 
         List<Oferta> ListarTodasOfertas();
 
-        List<Cupom> ListarCupomsPorComprador(Comprador comprador);
+        List<Cupom> ListarCupomsPorComprador(string CPF);
 
-        IList<Oferta> ListarOfertasPorAnunciante(string CPF);
+        IList<Oferta> ListarOfertasPorAnunciante(string CNPJ);
     }
 }

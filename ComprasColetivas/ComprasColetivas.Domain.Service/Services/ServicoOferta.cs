@@ -101,17 +101,19 @@ namespace ComprasColetivas.Domain.Service
             throw new NotImplementedException();
         }
 
-        public List<Cupom> ListarCupomsPorComprador(Comprador comprador)
+        public List<Cupom> ListarCupomsPorComprador(string CPF)
         {
-            IRepositorioOferta repo = FactoryRepository.getInstance.criarRepositorioOferta();
-            return repo.ListarCupomsPorComprador(comprador).ToList();
+            IRepositorioOferta repoOferta = FactoryRepository.getInstance.criarRepositorioOferta();
+            IRepositorioComprador repoComprador = FactoryRepository.getInstance.criarRepositorioComprador();
+            var comprador = repoComprador.ObterComprador(CPF);
+            return repoOferta.ListarCupomsPorComprador(comprador).ToList();
         }
 
-        public IList<Oferta> ListarOfertasPorAnunciante(string CPF)
+        public IList<Oferta> ListarOfertasPorAnunciante(string CNPJ)
         {
             IRepositorioOferta repoOferta = FactoryRepository.getInstance.criarRepositorioOferta();
             IRepositorioAnunciante repoAnunciante = FactoryRepository.getInstance.criarRepositorioAnunciante();
-            var anunciante = repoAnunciante.ObterAnunciante(CPF);
+            var anunciante = repoAnunciante.ObterAnunciante(CNPJ);
             return repoOferta.ListarOfertasPorAnunciante(anunciante);
         }
     }

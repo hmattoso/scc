@@ -6,7 +6,7 @@ using ComprasColetivas.Domain.Model;
 
 namespace ComprasColetivas.Domain.Service.Services.Interfaces
 {
-    interface IServicoComprador
+    public interface IServicoComprador
     {
         void CadastrarComprador(Comprador comprador);
     }

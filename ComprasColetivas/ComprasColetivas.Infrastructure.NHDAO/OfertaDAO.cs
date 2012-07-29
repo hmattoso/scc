@@ -18,49 +18,5 @@ namespace ComprasColetivas.Infrastructure.NHDAO
             return qryHQL.List<Oferta>();
         }
 
-        void IBaseDAO<Oferta>.IniciarTransacao()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IBaseDAO<Oferta>.FinalizarTransacao()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IBaseDAO<Oferta>.CancelarTransacao()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IBaseDAO<Oferta>.Salvar(Oferta entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        void IBaseDAO<Oferta>.Excluir(Oferta entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        Oferta IBaseDAO<Oferta>.ObterPorId(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        X IBaseDAO<Oferta>.ObterUm<X>(Func<X, bool> criterio)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Oferta> IBaseDAO<Oferta>.ObterTodos()
-        {
-            throw new NotImplementedException();
-        }
-
-        List<X> IBaseDAO<Oferta>.ObterTodos<X>(Func<X, bool> criterio)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

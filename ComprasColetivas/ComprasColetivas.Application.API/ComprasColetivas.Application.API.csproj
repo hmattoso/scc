@@ -53,7 +53,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
+    <Content Include="ServicosDoAnunciante.svc" />
+    <Content Include="ServicosDoComprador.svc" />
+    <Content Include="ServicosOferta.svc" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -63,16 +65,25 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
-    </Compile>
-    <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicosDoAnunciante.svc.cs">
+      <DependentUpon>ServicosDoAnunciante.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServicosDoComprador.svc.cs">
+      <DependentUpon>ServicosDoComprador.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServicosOferta.svc.cs">
+      <DependentUpon>ServicosOferta.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ComprasColetivas.Application.APIContract\ComprasColetivas.Application.APIContract.csproj">
+      <Project>{B9C886C6-B34E-4D98-B020-9413D14466C9}</Project>
+      <Name>ComprasColetivas.Application.APIContract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComprasColetivas.Domain.Model\ComprasColetivas.Domain.Model.csproj">
       <Project>{23518E33-60BA-41EF-86E0-68881ACA5A74}</Project>
       <Name>ComprasColetivas.Domain.Model</Name>

@@ -7,12 +7,43 @@ using System.Text;
 using ComprasColetivas.Application.APIContract.OperationContract;
 
 namespace ComprasColetivas.Application.API
-{
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ServicoOferta" in code, svc and config file together.
+{    
     public class ServicosOferta : IServicosOferta
     {
-        public void DoWork()
+
+        public void EnviarMalaDiretaOferta(APIContract.DataContract.OfertaContract ofertaContract)
         {
+            throw new NotImplementedException();
+        }
+
+        public void PublicarOferta(APIContract.DataContract.OfertaContract ofertaContract)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<APIContract.DataContract.OfertaContract> PesquisarPorTipoDeOferta(int tipoOferta)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<APIContract.DataContract.OfertaContract> ListarTodasOfertas()
+        {
+            throw new NotImplementedException();
+        }
+
+        public double CalcularRepassePorOferta(string CodigoOferta)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<APIContract.DataContract.OfertaContract> PesquisarOfertaPorRegiaoDoAnunciante(string CodigoCidade)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int TotalizarCuponsPorMes(int Mes, int Ano)
+        {
+            throw new NotImplementedException();
         }
     }
 }

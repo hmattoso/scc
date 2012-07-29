@@ -4,14 +4,18 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using ComprasColetivas.Application.APIContract.DataContract;
 
 namespace ComprasColetivas.Application.APIContract.OperationContract
-{
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IServicoComprador" in both code and config file together.
+{    
     [ServiceContract]
     public interface IServicosDoComprador
-    {
+    {        
         [OperationContract]
-        void DoWork();
+        void CadastrarComprador(CompradorContract comprador);
+        [OperationContract]
+        List<CupomContract> ObterCupomsPorComprador(string cpf);
+        [OperationContract]
+        int TotalizarCuponsPorComprador(string cpf);
     }
 }

@@ -7,7 +7,7 @@ using ComprasColetivas.Infrastructure.IDAO;
 
 namespace ComprasColetivas.Infrastructure.MongoDbDAO
 {
-    class AnuncianteDAO : BaseDAO<Anunciante>,IAnuncianteDAO
+    public class AnuncianteDAO : BaseDAO<Anunciante>, IAnuncianteDAO
     {
 
     }
