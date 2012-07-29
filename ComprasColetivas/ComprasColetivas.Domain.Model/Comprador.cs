@@ -12,5 +12,11 @@ namespace ComprasColetivas.Domain.Model
         public virtual string FiliacaoPai { get; set; }
         public virtual string FiliacaoMae { get; set; }
         public virtual bool RecebeEmailOferta { get; set; }
+
+
+        public bool IsAniversario()
+        {
+            return (Nascimento.Day == DateTime.Now.Day);
+        }
     }
 }

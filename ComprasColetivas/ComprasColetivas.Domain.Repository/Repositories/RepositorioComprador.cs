@@ -5,6 +5,7 @@ using System.Text;
 using ComprasColetivas.Domain.Model;
 using ComprasColetivas.Domain.Repository.Repositories.Interfaces;
 using ComprasColetivas.Infrastructure.DAO.Factories;
+using ComprasColetivas.Infrastructure.IDAO;
 
 namespace ComprasColetivas.Domain.Repository.Repositories
 {
@@ -14,6 +15,11 @@ namespace ComprasColetivas.Domain.Repository.Repositories
             : base()
         {
             dao = FactoryDAO.getInstance.CriarCompradorDAO();
+        }
+
+        public Comprador ObterComprador(string cpf)
+        {
+            return (dao as ICompradorDAO).ObterUm<Comprador>(comprador => comprador.CPF == cpf);
         }
     }
 }

@@ -8,5 +8,6 @@ namespace ComprasColetivas.Domain.Repository.Repositories.Interfaces
 {
     public interface IRepositorioComprador : IRepository<Comprador>
     {
+        Comprador ObterComprador(string cpf);
     }
 }

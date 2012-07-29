@@ -8,5 +8,6 @@ namespace ComprasColetivas.Domain.Repository.Repositories.Interfaces
 {
     public interface IRepositorioAnunciante: IRepository<Anunciante>
     {
+        Anunciante ObterAnunciante(string cnpj);
     }
 }

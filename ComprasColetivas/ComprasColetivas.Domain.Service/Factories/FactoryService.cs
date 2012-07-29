@@ -26,5 +26,15 @@ namespace ComprasColetivas.Domain.Service.Factories
         {
             return new ServicoAnunciante();
         }
+
+        public override IServicoComprador criarServicoComprador()
+        {
+            return new ServicoComprador();
+        }
+
+        public override IServicoOferta criarServicoOferta()
+        {
+            return new ServicoOferta();
+        }
     }
 }

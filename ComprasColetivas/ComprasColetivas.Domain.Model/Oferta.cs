@@ -12,6 +12,11 @@ namespace ComprasColetivas.Domain.Model
         public virtual DateTime Fim { get; set; }
         public virtual string Titulo { get; set; }
         public virtual string Descritivo { get; set; }
-        public virtual string Imagem { get; set; }   
+        public virtual string Imagem { get; set; }
+        
+        public bool IsVigente()
+        {
+            return (this.Fim >= DateTime.Now);
+        }
     }
 }

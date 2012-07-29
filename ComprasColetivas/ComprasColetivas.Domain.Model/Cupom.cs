@@ -11,6 +11,7 @@ namespace ComprasColetivas.Domain.Model
         public virtual DateTime Validade { get; set; }
         public virtual bool Utilizado { get; set; }
         public virtual Pagamento Pagamento { get; set; }
+       
     }
 
 }

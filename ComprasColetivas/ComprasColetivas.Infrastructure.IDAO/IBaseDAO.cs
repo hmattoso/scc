@@ -12,7 +12,7 @@ namespace ComprasColetivas.Infrastructure.IDAO
         void FinalizarTransacao();
         void CancelarTransacao();
         void Salvar(T entity);
-        void Excluir(T entity);
+        void Excluir(T entity);        
         T ObterPorId(Guid id);
         X ObterUm<X>(Func<X, bool> criterio);
         List<T> ObterTodos();

@@ -8,23 +8,28 @@ namespace ComprasColetivas.Domain.Service.Services.Interfaces
 {
     public interface IServicoOferta
     {
+        void EnviarMalaDiretaOferta(Oferta oferta);
 
-        void PublicarOferta(Oferta oferta);
+        void PublicarOferta(Oferta oferta);        
 
-        void EnviarMalaDiretaOferta();
+        double CalcularRepassePorOferta(string CodigoOferta);
 
-        void CalcularRepassePorOferta(string CodigoOferta);
+        List<Oferta> PesquisarOfertaPorRegiaoDoAnunciante(string CodigoCidade);
 
-        void PesquisarPorRegiaoDoAnunciante(string CodigoCidade);
+        int TotalizarCuponsPorMes(int Mes, int Ano);
 
-        void TotalizarCuponsPorMes(int Mes, int Ano);
+        int TotalizarCuponsPorAnunciante(string CNPJ);
 
-        void TotalizarCuponsPorAnunciante(string CNPJ);
-
-        void TotalizarCuponsPorComprador(string CPF);
+        int TotalizarCuponsPorComprador(string CPF);
 
         void BaixarCupom(string CodigoCupom);
 
+        List<Oferta> PesquisarPorTipoDeOferta(TipoOferta tipoOferta);
 
+        List<Oferta> ListarTodasOfertas();
+
+        List<Cupom> ListarCupomsPorComprador(Comprador comprador);
+
+        IList<Oferta> ListarOfertasPorAnunciante(string CPF);
     }
 }

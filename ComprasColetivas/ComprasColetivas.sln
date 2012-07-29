@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComprasColetivas.Infrastruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComprasColetivas.Infrastructure.MongoDbHelper", "ComprasColetivas.Infrastructure.MongoDbHelper\ComprasColetivas.Infrastructure.MongoDbHelper.csproj", "{650FAD25-7505-44FD-B3E5-B52053A826D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComprasColetivas.Infrastructure.SendMail", "ComprasColetivas.Infrastructure.SendMail\ComprasColetivas.Infrastructure.SendMail.csproj", "{97BCEA62-6E5F-498C-8C22-C769A445CFCE}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ComprasColetivas.vsmdi
@@ -103,6 +105,10 @@ Global
 		{650FAD25-7505-44FD-B3E5-B52053A826D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{650FAD25-7505-44FD-B3E5-B52053A826D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{650FAD25-7505-44FD-B3E5-B52053A826D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97BCEA62-6E5F-498C-8C22-C769A445CFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BCEA62-6E5F-498C-8C22-C769A445CFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BCEA62-6E5F-498C-8C22-C769A445CFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BCEA62-6E5F-498C-8C22-C769A445CFCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +122,7 @@ Global
 		{F67DB5E9-A630-4793-AFEB-630218CBFFA6} = {467D5E63-0FB7-42CF-B7F4-6026BEB508D4}
 		{6F75CA85-293A-40DE-B142-F15075125A2C} = {467D5E63-0FB7-42CF-B7F4-6026BEB508D4}
 		{650FAD25-7505-44FD-B3E5-B52053A826D4} = {467D5E63-0FB7-42CF-B7F4-6026BEB508D4}
+		{97BCEA62-6E5F-498C-8C22-C769A445CFCE} = {467D5E63-0FB7-42CF-B7F4-6026BEB508D4}
 		{23518E33-60BA-41EF-86E0-68881ACA5A74} = {D5DD705B-7507-4C7E-8B64-45370F946768}
 		{111172E8-DD9F-4035-94EB-42622387CC74} = {D5DD705B-7507-4C7E-8B64-45370F946768}
 		{9E5D6736-BB12-4C31-B6DB-E9AA970C97D5} = {D5DD705B-7507-4C7E-8B64-45370F946768}

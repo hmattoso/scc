@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{111172E8-DD9F-4035-94EB-42622387CC74}</ProjectGuid>
+    <ProjectGuid>0d6d0a34-234c-4fe0-b529-781f9df2a356</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ComprasColetivas.Domain.Repository</RootNamespace>
-    <AssemblyName>ComprasColetivas.Domain.Repository</AssemblyName>
+    <RootNamespace>ComprasColetivas.Test.IntegrationTest</RootNamespace>
+    <AssemblyName>ComprasColetivas.Test.IntegrationTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,35 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory\AbstractFactoryRepository.cs" />
-    <Compile Include="Factories\FactoryRepository.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Interfaces\IRepositorioComprador.cs" />
-    <Compile Include="Repositories\RepositorioComprador.cs" />
-    <Compile Include="Repositories\RepositorioOferta.cs" />
-    <Compile Include="Repositories\Interfaces\IRepositorioOferta.cs" />
-    <Compile Include="Repositories\Interfaces\IRepositorioAnunciante.cs" />
-    <Compile Include="Repositories\Interfaces\IRepository.cs" />
-    <Compile Include="Repositories\RepositorioAnunciante.cs" />
-    <Compile Include="Repositories\RepositoryBase.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ComprasColetivas.Domain.Model\ComprasColetivas.Domain.Model.csproj">
-      <Project>{23518E33-60BA-41EF-86E0-68881ACA5A74}</Project>
-      <Name>ComprasColetivas.Domain.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ComprasColetivas.Domain.Specification\ComprasColetivas.Domain.Specification.csproj">
-      <Project>{31E76922-26F2-4F1F-B63D-773EFC2AB1BA}</Project>
-      <Name>ComprasColetivas.Domain.Specification</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ComprasColetivas.Infrastructure.DAO\ComprasColetivas.Infrastructure.DAO.csproj">
-      <Project>{07C7AEC0-9411-4AC1-91C7-82742767A463}</Project>
-      <Name>ComprasColetivas.Infrastructure.DAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ComprasColetivas.Infrastructure.IDAO\ComprasColetivas.Infrastructure.IDAO.csproj">
-      <Project>{F67DB5E9-A630-4793-AFEB-630218CBFFA6}</Project>
-      <Name>ComprasColetivas.Infrastructure.IDAO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
