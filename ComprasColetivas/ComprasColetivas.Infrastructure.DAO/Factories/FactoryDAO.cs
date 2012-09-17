@@ -21,7 +21,7 @@ namespace ComprasColetivas.Infrastructure.DAO.Factories
         {
             
             //aqui verificaremos qual o tipo de banco estamos processando pelo padrão provider
-            //se sor relacional, a persistencia será do NH, caso contrario deverá retornar um DAO
+            //se for relacional, a persistencia será do NH, caso contrario deverá retornar um DAO
             //especifico, ex: AnuncianteDAOMongo() que implementa a mesma interface IAnuncianteDAO.
 
             return new AnuncianteDAO();
@@ -33,7 +33,7 @@ namespace ComprasColetivas.Infrastructure.DAO.Factories
         {
 
             //aqui verificaremos qual o tipo de banco estamos processando pelo padrão provider
-            //se sor relacional, a persistencia será do NH, caso contrario deverá retornar um DAO
+            //se for relacional, a persistencia será do NH, caso contrario deverá retornar um DAO
             //especifico, ex: OfertaDAOMongo() que implementa a mesma interface IOfertaDAO.
 
             return new OfertaDAO();

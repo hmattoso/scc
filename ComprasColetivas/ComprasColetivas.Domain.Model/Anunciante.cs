@@ -24,13 +24,13 @@ namespace ComprasColetivas.Domain.Model
             this.WebSite = webSite;
         }
 
-        public bool IsEmailValido(string email)
+        public virtual bool IsEmailValido(string email)
         {
             return Regex.Match(email, regexEmail).Success;
 
         }
 
-        public bool IsCNPJValido(string cnpj)
+        public virtual bool IsCNPJValido(string cnpj)
         {
             return Regex.Match(cnpj, regexCnpj).Success;
         }

@@ -14,7 +14,7 @@ namespace ComprasColetivas.Domain.Model
         public virtual string Descritivo { get; set; }
         public virtual string Imagem { get; set; }
         
-        public bool IsVigente()
+        public virtual bool IsVigente()
         {
             return (this.Fim >= DateTime.Now);
         }

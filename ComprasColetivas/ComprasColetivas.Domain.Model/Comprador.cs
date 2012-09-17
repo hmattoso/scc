@@ -17,15 +17,19 @@ namespace ComprasColetivas.Domain.Model
         private string regexCpf = @"^\d{3}\.?\d{3}\.?\d{3}\-?\d{2}$";
         //private string regexNascimento = @"^((0[1-9]|[12]\d)\/(0[1-9]|1[0-2])|30\/(0[13-9]|1[0-2])|31\/(0[13578]|1[02]))\/\d{4}$";
 
-        public bool IsAniversario()
+        public virtual bool IsAniversario()
         {
             return (Nascimento.Day == DateTime.Now.Day);
         }
 
-        public bool IsCPFValido(string cpf)
+        public virtual bool IsCPFValido(string cpf)
         {
             return Regex.Match(cpf, regexCpf).Success;
-        }        
+        }
+
+        public Comprador()
+        { 
+        }
 
         public Comprador(string nome, string cpf, string filiacaoMae, string filiacaoPai, DateTime nascimento, string orgaoEmissor, bool recebeEmailOferta, string rg)
         {
