@@ -26,8 +26,8 @@ namespace ComprasColetivas.Infrastructure.NHibernateHelper.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MATTOSO-NB\\SQLEXPRESS;Initial Catalog=FLUENTNH;Integrated Security=Tr" +
-            "ue;Persist Security Info=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HELENO-PC\\SQLEXPRESS;Initial Catalog=SCC;Integrated Security=True;Per" +
+            "sist Security Info=False")]
         public string ConnectionStringSQLServer {
             get {
                 return ((string)(this["ConnectionStringSQLServer"]));

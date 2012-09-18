@@ -12,7 +12,7 @@ namespace ComprasColetivas.Domain.Model
         public virtual bool Utilizado { get; set; }
         public virtual Pagamento Pagamento { get; set; }
        
-        public bool IsValido()
+        public virtual bool IsValido()
         {
             return (this.Validade >= DateTime.Now);
         }
