@@ -7,12 +7,12 @@ using System.Text;
 using ComprasColetivas.Application.APIContract.DataContract;
 
 namespace ComprasColetivas.Application.APIContract.OperationContract
-{    
+{
     [ServiceContract]
     public interface IServicosOferta
     {
         [OperationContract]
-        void EnviarMalaDiretaOferta(OfertaContract ofertaContract);
+        void EnviarMalaDiretaOferta(OfertaContract ofertaContract, AnuncianteContract anuncianteContract);
 
         [OperationContract]
         void PublicarOferta(OfertaContract ofertaContract);

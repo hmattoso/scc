@@ -23,9 +23,9 @@ namespace ComprasColetivas.Domain.Repository.Repositories
             return (dao as IOfertaDAO).ListarOfertasPorAnunciante(anunciante);
         }
 
-        public IList<Oferta> ListarOfertasPorTipoDeOferta(TipoOferta tipoOferta)
+        public IList<Oferta> ListarOfertasPorTipoDeOferta(int tipoOferta)
         {
-            return (dao as IOfertaDAO).ObterTodos<Oferta>(oferta => oferta.tipoOferta == tipoOferta);
+            return (dao as IOfertaDAO).ObterTodos<Oferta>(oferta => (int)oferta.tipoOferta == tipoOferta);
         }
 
         public IList<Cupom> ListarCupomsPorComprador(Comprador comprador)

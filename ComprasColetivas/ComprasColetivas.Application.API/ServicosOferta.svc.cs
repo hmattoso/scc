@@ -26,17 +26,33 @@ namespace ComprasColetivas.Application.API
 
         public void PublicarOferta(OfertaContract ofertaContract)
         {
-            throw new NotImplementedException();
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            Anunciante anunciante = FactoryService.getInstance.criarServicoAnunciante().ObterPorCNPJ(ofertaContract.CnpjAnunciante);
+            Endereco endereco = new Endereco(ofertaContract.Logradouro, ofertaContract.Numero, ofertaContract.Complemento, ofertaContract.CEP, ofertaContract.Bairro);
+            Oferta oferta = new Oferta(anunciante, ofertaContract.tipoOferta, endereco, ofertaContract.Inicio, ofertaContract.Fim, ofertaContract.Titulo, ofertaContract.Descritivo, ofertaContract.Imagem);
+            servicoOferta.PublicarOferta(oferta);
         }
 
-        public List<APIContract.DataContract.OfertaContract> PesquisarPorTipoDeOferta(int tipoOferta)
+        public List<OfertaContract> PesquisarPorTipoDeOferta(int tipoOferta)
         {
-            throw new NotImplementedException();
+            List<OfertaContract> ofertas = new List<OfertaContract>();
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            var ofertasPorTipo = servicoOferta.PesquisarPorTipoDeOferta(tipoOferta);
+            foreach (var item in ofertasPorTipo)
+                ofertas.Add(new OfertaContract(item));
+
+            return ofertas;
         }
 
-        public List<APIContract.DataContract.OfertaContract> ListarTodasOfertas()
+        public List<OfertaContract> ListarTodasOfertas()
         {
-            throw new NotImplementedException();
+            List<OfertaContract> ofertas = new List<OfertaContract>();
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            var ofertasPorTipo = servicoOferta.ListarTodasOfertas();
+            foreach (var item in ofertasPorTipo)
+                ofertas.Add(new OfertaContract(item));
+
+            return ofertas;
         }
 
         public double CalcularRepassePorOferta(string CodigoOferta)
@@ -44,9 +60,15 @@ namespace ComprasColetivas.Application.API
             throw new NotImplementedException();
         }
 
-        public List<APIContract.DataContract.OfertaContract> PesquisarOfertaPorRegiaoDoAnunciante(string CodigoCidade)
+        public List<OfertaContract> PesquisarOfertaPorRegiaoDoAnunciante(string CodigoCidade)
         {
-            throw new NotImplementedException();
+            List<OfertaContract> ofertas = new List<OfertaContract>();
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            var ofertasPorTipo = servicoOferta.PesquisarOfertaPorRegiaoDoAnunciante(CodigoCidade);
+            foreach (var item in ofertasPorTipo)
+                ofertas.Add(new OfertaContract(item));
+
+            return ofertas;
         }
 
         public int TotalizarCuponsPorMes(int Mes, int Ano)

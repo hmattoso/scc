@@ -24,7 +24,7 @@ namespace ComprasColetivas.Domain.Service.Services.Interfaces
 
         void BaixarCupom(string CodigoCupom);
 
-        List<Oferta> PesquisarPorTipoDeOferta(TipoOferta tipoOferta);
+        List<Oferta> PesquisarPorTipoDeOferta(int tipoOferta);
 
         List<Oferta> ListarTodasOfertas();
 

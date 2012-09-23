@@ -36,7 +36,7 @@ namespace ComprasColetivas.Domain.Service
             }
         }
 
-        public List<Oferta> PesquisarPorTipoDeOferta(TipoOferta tipoOferta)
+        public List<Oferta> PesquisarPorTipoDeOferta(int tipoOferta)
         {
             IRepositorioOferta repo = FactoryRepository.getInstance.criarRepositorioOferta();
             List<Oferta> ofertas = new List<Oferta>();
