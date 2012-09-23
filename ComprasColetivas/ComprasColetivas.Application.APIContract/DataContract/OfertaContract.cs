@@ -3,14 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
+using ComprasColetivas.Domain.Model;
 
 namespace ComprasColetivas.Application.APIContract.DataContract
 {
     [DataContract]
     public class OfertaContract
     {
+        public OfertaContract(Oferta item)
+        {
+            this.NomeFantasia = item.anunciante.NomeFantasia;
+            this.tipoOferta = (int)item.tipoOferta == 1 ? "Serviço" : "Produto";
+            this.Logradouro = item.enderecoOferta.Logradouro;
+            this.Numero = item.enderecoOferta.Numero;
+            this.Complemento = item.enderecoOferta.Complemento;
+            this.CEP = item.enderecoOferta.CEP;
+            this.Bairro = item.enderecoOferta.Bairro;
+            this.Cidade = item.enderecoOferta.cidade.Nome;
+            this.Inicio = item.Inicio;
+            this.Fim = item.Fim;
+            this.Titulo = item.Titulo;
+            this.Descritivo = item.Descritivo;
+            this.Imagem = item.Imagem;
+            this.CnpjAnunciante = item.anunciante.CNPJ;
+        }
+
         [DataMember]
         public string NomeFantasia { get; set; }
+        [DataMember]
+        public string CnpjAnunciante { get; set; }
         [DataMember]
         public string tipoOferta { get; set; }
         [DataMember]

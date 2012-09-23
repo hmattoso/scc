@@ -30,6 +30,12 @@ namespace ComprasColetivas.Domain.Service.Services
                 throw;
             }
 
-        }       
+        }
+
+        public Anunciante ObterPorCNPJ(string cnpj)
+        {
+            IRepositorioAnunciante repo = FactoryRepository.getInstance.criarRepositorioAnunciante();
+            return repo.ObterAnunciante(cnpj);
+        }
     }
 }

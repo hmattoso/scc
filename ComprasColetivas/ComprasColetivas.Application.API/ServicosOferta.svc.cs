@@ -5,18 +5,26 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using ComprasColetivas.Application.APIContract.OperationContract;
+using ComprasColetivas.Domain.Service.Factories;
+using ComprasColetivas.Domain.Service.Services.Interfaces;
+using ComprasColetivas.Domain.Model;
+using ComprasColetivas.Application.APIContract.DataContract;
 
 namespace ComprasColetivas.Application.API
-{    
+{
     public class ServicosOferta : IServicosOferta
     {
 
-        public void EnviarMalaDiretaOferta(APIContract.DataContract.OfertaContract ofertaContract)
+        public void EnviarMalaDiretaOferta(OfertaContract ofertaContract, AnuncianteContract anuncianteContract)
         {
-            throw new NotImplementedException();
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            Anunciante anunciante = FactoryService.getInstance.criarServicoAnunciante().ObterPorCNPJ(ofertaContract.CnpjAnunciante);
+            Endereco endereco = new Endereco(ofertaContract.Logradouro, ofertaContract.Numero, ofertaContract.Complemento, ofertaContract.CEP, ofertaContract.Bairro);
+            Oferta oferta = new Oferta(anunciante, ofertaContract.tipoOferta, endereco, ofertaContract.Inicio, ofertaContract.Fim, ofertaContract.Titulo, ofertaContract.Descritivo, ofertaContract.Imagem);
+            servicoOferta.EnviarMalaDiretaOferta(oferta);
         }
 
-        public void PublicarOferta(APIContract.DataContract.OfertaContract ofertaContract)
+        public void PublicarOferta(OfertaContract ofertaContract)
         {
             throw new NotImplementedException();
         }

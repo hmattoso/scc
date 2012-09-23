@@ -9,6 +9,6 @@ namespace ComprasColetivas.Domain.Service.Services.Interfaces
     public interface IServicoAnunciante
     {
         void CadastrarAnunciante(Anunciante anunciante);
-        
+        Anunciante ObterPorCNPJ(string cnpj);
     }
 }

@@ -10,5 +10,16 @@ namespace ComprasColetivas.Domain.Model
         public virtual string CEP { get; set; }
         public virtual string Bairro { get; set; }
         public virtual Cidade cidade { get; set; }
+
+        public Endereco(string logradouro, string numero, string complemento, string cep, string bairro/*, Cidade cidade*/)
+        {
+            this.Logradouro = logradouro;
+            this.Numero = numero;
+            this.Complemento = complemento;
+            this.CEP = cep;
+            this.Bairro = bairro;
+            //this.cidade = cidade;
+        }
+
     }
 }

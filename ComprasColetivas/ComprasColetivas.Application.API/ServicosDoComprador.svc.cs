@@ -11,7 +11,7 @@ using ComprasColetivas.Domain.Service.Factories;
 using ComprasColetivas.Domain.Model;
 
 namespace ComprasColetivas.Application.API
-{    
+{
     public class ServicosDoComprador : IServicosDoComprador
     {
         public void CadastrarComprador(CompradorContract compradorContract)
@@ -23,9 +23,12 @@ namespace ComprasColetivas.Application.API
 
         public List<CupomContract> ObterCupomsPorComprador(string cpf)
         {
+            List<CupomContract> cupoms = new List<CupomContract>();
             IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
-            servicoOferta.ListarCupomsPorComprador(cpf);
-            throw new NotImplementedException();
+            var cupomsPorComprador = servicoOferta.ListarCupomsPorComprador(cpf);
+            foreach (var item in cupomsPorComprador)
+                cupoms.Add(new CupomContract(item));
+            return cupoms;
         }
 
         public int TotalizarCuponsPorComprador(string cpf)

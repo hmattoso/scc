@@ -26,9 +26,12 @@ namespace ComprasColetivas.Application.API
 
         public List<OfertaContract> ObterOfertasPorAnunciante(string cnpj)
         {
+            List<OfertaContract> ofertas = new List<OfertaContract>();
             IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
-            servicoOferta.ListarOfertasPorAnunciante(cnpj);
-            throw new NotImplementedException();
+            var ofertasPorAnunciante  = servicoOferta.ListarOfertasPorAnunciante(cnpj);
+            foreach (var item in ofertasPorAnunciante)
+                ofertas.Add(new OfertaContract(item));
+            return ofertas;            
         }
 
         public int TotalizarCuponsPorAnunciante(string cnpj)
