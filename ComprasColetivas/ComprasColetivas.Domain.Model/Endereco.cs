@@ -21,5 +21,6 @@ namespace ComprasColetivas.Domain.Model
             //this.cidade = cidade;
         }
 
+        public Endereco() { }
     }
 }

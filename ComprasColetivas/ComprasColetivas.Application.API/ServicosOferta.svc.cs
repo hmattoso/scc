@@ -73,7 +73,8 @@ namespace ComprasColetivas.Application.API
 
         public int TotalizarCuponsPorMes(int Mes, int Ano)
         {
-            throw new NotImplementedException();
+            IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
+            return servicoOferta.TotalizarCuponsPorMes(Mes, Ano);
         }
     }
 }

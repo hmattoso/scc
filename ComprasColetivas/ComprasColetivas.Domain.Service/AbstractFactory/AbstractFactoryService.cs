@@ -12,5 +12,6 @@ namespace ComprasColetivas.Domain.Service.AbstractFactory
         public abstract IServicoAnunciante criarServicoAnunciante();
         public abstract IServicoComprador criarServicoComprador();
         public abstract IServicoOferta criarServicoOferta();
+        
     }
 }

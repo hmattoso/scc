@@ -14,10 +14,10 @@ namespace ComprasColetivas.Domain.Service.Services
     {
 
         public void CadastrarAnunciante(Anunciante anunciante)
-        {            
+        {
 
             IRepositorioAnunciante repo = FactoryRepository.getInstance.criarRepositorioAnunciante();
-            
+
             repo.IniciarTransacao();
             try
             {

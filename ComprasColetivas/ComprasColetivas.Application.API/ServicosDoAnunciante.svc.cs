@@ -45,5 +45,6 @@ namespace ComprasColetivas.Application.API
             IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
             servicoOferta.BaixarCupom(CodigoCupom);
         }
+
     }
 }

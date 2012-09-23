@@ -36,5 +36,6 @@ namespace ComprasColetivas.Domain.Service.Factories
         {
             return new ServicoOferta();
         }
+
     }
 }

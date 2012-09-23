@@ -46,7 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ServicoAnunciante.cs" />
+    <Compile Include="ServicoComprador.cs" />
+    <Compile Include="ServicoOferta.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ComprasColetivas.Domain.Model\ComprasColetivas.Domain.Model.csproj">
