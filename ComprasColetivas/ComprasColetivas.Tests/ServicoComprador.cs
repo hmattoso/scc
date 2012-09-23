@@ -11,7 +11,7 @@ using ComprasColetivas.Domain.Service.Helper;
 namespace ComprasColetivas.Tests
 {
     [TestClass]
-    class ServicoComprador
+    public class ServicoComprador
     {
         [TestMethod]
         public void cadastrar_comprador()

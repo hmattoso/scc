@@ -9,6 +9,7 @@ using ComprasColetivas.Application.APIContract.DataContract;
 using ComprasColetivas.Domain.Service.Services.Interfaces;
 using ComprasColetivas.Domain.Service.Factories;
 using ComprasColetivas.Domain.Model;
+using ComprasColetivas.Cross_Cutting.Authentication;
 
 namespace ComprasColetivas.Application.API
 {
@@ -35,6 +36,13 @@ namespace ComprasColetivas.Application.API
         {
             IServicoOferta servicoOferta = FactoryService.getInstance.criarServicoOferta();
             return servicoOferta.TotalizarCuponsPorComprador(cpf);
+        }
+
+
+        public bool Logar(string usuario, string senha)
+        {
+            SSO authentication = new SSO();
+            return authentication.Autenticar(usuario, senha);
         }
     }
 }

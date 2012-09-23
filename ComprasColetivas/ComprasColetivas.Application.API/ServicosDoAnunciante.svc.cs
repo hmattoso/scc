@@ -9,6 +9,7 @@ using ComprasColetivas.Application.APIContract.DataContract;
 using ComprasColetivas.Domain.Model;
 using ComprasColetivas.Domain.Service.Services.Interfaces;
 using ComprasColetivas.Domain.Service.Factories;
+using ComprasColetivas.Cross_Cutting.Authentication;
 
 
 namespace ComprasColetivas.Application.API
@@ -46,5 +47,10 @@ namespace ComprasColetivas.Application.API
             servicoOferta.BaixarCupom(CodigoCupom);
         }
 
+        public bool Logar(string usuario, string senha)
+        {
+            SSO authentication = new SSO();
+            return authentication.Autenticar(usuario, senha);
+        }
     }
 }

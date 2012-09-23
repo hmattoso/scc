@@ -17,5 +17,7 @@ namespace ComprasColetivas.Application.APIContract.OperationContract
         List<CupomContract> ObterCupomsPorComprador(string cpf);
         [OperationContract]
         int TotalizarCuponsPorComprador(string cpf);
+        [OperationContract]
+        bool Logar(string usuario, string senha);
     }
 }

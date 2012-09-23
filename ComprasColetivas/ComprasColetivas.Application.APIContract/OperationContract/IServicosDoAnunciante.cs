@@ -7,7 +7,7 @@ using System.Text;
 using ComprasColetivas.Application.APIContract.DataContract;
 
 namespace ComprasColetivas.Application.APIContract.OperationContract
-{    
+{
     [ServiceContract]
     public interface IServicosDoAnunciante
     {
@@ -19,5 +19,7 @@ namespace ComprasColetivas.Application.APIContract.OperationContract
         int TotalizarCuponsPorAnunciante(string cnpj);
         [OperationContract]
         void BaixarCupom(string CodigoCupom);
+        [OperationContract]
+        bool Logar(string usuario, string senha);
     }
 }

@@ -84,6 +84,10 @@
       <Project>{B9C886C6-B34E-4D98-B020-9413D14466C9}</Project>
       <Name>ComprasColetivas.Application.APIContract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ComprasColetivas.Cross-Cutting.Authentication\ComprasColetivas.Cross-Cutting.Authentication.csproj">
+      <Project>{A651D084-AF41-4ADF-BE05-3793AAFB27D5}</Project>
+      <Name>ComprasColetivas.Cross-Cutting.Authentication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComprasColetivas.Domain.Model\ComprasColetivas.Domain.Model.csproj">
       <Project>{23518E33-60BA-41EF-86E0-68881ACA5A74}</Project>
       <Name>ComprasColetivas.Domain.Model</Name>
